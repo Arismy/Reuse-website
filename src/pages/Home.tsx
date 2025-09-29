@@ -16,8 +16,8 @@ const Home = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Passionate developer with <span className="gradient-text-secondary font-semibold">5 years of experience</span> 
-              {" "}creating innovative web applications, mobile apps, and designing software solutions that make a difference. I’ve spent countless “years” immersed in fiction, poetry, and prose, studying what makes writing resonate.
+              I'm a <span className="gradient-text-secondary font-semibold">motivated and hardworking</span> 
+              {" "} individual who enjoys learning new skills and applying them to improve both myself and the workplace. My journey in full stack development has been driven by curiosity and a commitment to excellence. I’ve spent countless “years” immersed in fiction, poetry, and prose, studying what makes writing resonate.
             </p>
           </div>
 
