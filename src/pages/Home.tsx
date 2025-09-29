@@ -17,7 +17,7 @@ const Home = () => {
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Passionate developer with <span className="gradient-text-secondary font-semibold">5 years of experience</span> 
-              {" "}creating innovative web applications, mobile apps, and designing software solutions that make a difference. I’ve spent countless “years” immersed in fiction, poetry, and prose, studying what makes writing resonate. Whether you’re polishing a short story, breaking through writer’s block, experimenting with form, or just starting out, I can be your sounding board.
+              {" "}creating innovative web applications, mobile apps, and designing software solutions that make a difference. I’ve spent countless “years” immersed in fiction, poetry, and prose, studying what makes writing resonate.
             </p>
           </div>
 
