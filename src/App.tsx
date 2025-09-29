@@ -30,8 +30,6 @@ const App = () => (
           <Route path="/blog" element={<Layout><Blog /></Layout>} />
           <Route path="/blog/:id" element={<Layout><BlogPost /></Layout>} />
           <Route path="/contact" element={<Layout><Contact /></Layout>} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
