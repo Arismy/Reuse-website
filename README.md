@@ -1,73 +1,18 @@
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/5a464d2d-0f77-4323-9940-9ce473ba6cc9
+# Welcome to your web-portfolio Project info
 
 ## How can I edit this code?
+I'd be happy to help you get or create a prompt! However, I need a bit more context to understand what you're looking for. Here are some common scenarios:
 
-There are several ways of editing your application.
+If you want to:
+- Get the system prompt I'm using → I can't share my internal system prompt, but I can help you create effective prompts
+- Create a prompt for another AI system → Tell me what you want the AI to do
+- Get prompt engineering tips → I can share best practices
+- Create prompts for specific tasks → Let me know what task (writing, coding, analysis, etc.)
 
-**Use Lovable**
+**Could you clarify what you mean by "Get prompt"?**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5a464d2d-0f77-4323-9940-9ce473ba6cc9) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5a464d2d-0f77-4323-9940-9ce473ba6cc9) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+For example:
+- "I need a prompt to generate marketing copy"
+- "I want to create effective ChatGPT prompts"
+- "I need a system prompt for my AI project"
+- "Show me how to write better prompts"
