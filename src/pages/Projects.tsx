@@ -6,8 +6,8 @@ import { ExternalLink, Github, Smartphone, Globe, Database } from "lucide-react"
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with modern technologies for scalability and performance.",
+      title: "E-Commerce",
+      description: "Developed a high-performance e-commerce marketplace with payment processing, inventory management, and vendor dashboards. Implemented server-side rendering for optimal SEO and performance.",
       image: "/img/Apple-Store.jpg",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
       type: "Web Application",
@@ -19,7 +19,7 @@ const Projects = () => {
     },
     {
       title: "Reflect App",
-      description: "Cross-platform mobile application for team collaboration and project management. Features real-time synchronization and offline capabilities.",
+      description: "Designed and developed a mobile-first social networking platform with infinite scroll, image optimization, and progressive web app capabilities. Achieved 95+ Lighthouse scores across all metrics.",
       image: "/img/Apple-Store.jpg", 
       technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
       type: "Mobile App",
@@ -30,8 +30,8 @@ const Projects = () => {
       repoUrl: "https://github.com/muhammadyasirmalkani1/reflect.me"
     },
     {
-      title: "Dashboard Crypto Vault",
-      description: "Business intelligence dashboard with interactive charts, real-time data visualization, and automated reporting capabilities.",
+      title: "Dashboard Vault",
+      description: "Created a real-time analytics dashboard processing millions of events per day. Built custom data visualization components and optimized query performance for sub-second response times.",
       image: "/api/placeholder/600/400",
       technologies: ["Vue.js", "Python", "MongoDB", "D3.js", "Docker"],
       type: "Web Application", 
