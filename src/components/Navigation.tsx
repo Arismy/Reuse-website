@@ -8,7 +8,7 @@ const Navigation = () => {
 
   const navItems = [
     { path: "/", label: "Home", icon: Code2 },
-    { path: "https://web-portfolio-creater.vercel.app/about", label: "About", icon: User },
+    { path: "https://web-portfolio-creater.vercel.app/about/", label: "About", icon: User },
     { path: "/skills", label: "Skills", icon: Lightbulb },
     { path: "/experience", label: "Experience", icon: Award },
     { path: "/projects", label: "Projects", icon: Briefcase },
