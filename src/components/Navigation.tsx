@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Code2, User, Briefcase, Mail, Lightbulb, BookOpen, GraduationCap } from "lucide-react";
+import { Menu, X, Code2, User, Briefcase, Mail, Lightbulb, BookOpen, GraduationCap, Award } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,7 @@ const Navigation = () => {
     { path: "/", label: "Home", icon: Code2 },
     { path: "/about", label: "About", icon: User },
     { path: "/skills", label: "Skills", icon: Lightbulb },
+    { path: "/experience", label: "Experience", icon: Award },
     { path: "/projects", label: "Projects", icon: Briefcase },
     { path: "/education", label: "Education", icon: GraduationCap },
     { path: "/blog", label: "Blog", icon: BookOpen },
