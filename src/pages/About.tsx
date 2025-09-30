@@ -44,19 +44,17 @@ const About = () => {
                 
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    I am a motivated and hardworking individual with <span className="text-foreground font-semibold">5 years of experience</span> in 
-                    full-stack development. My journey in tech has been driven by a genuine passion for creating innovative solutions.
+                    I'm a senior full-stack developer passionate about crafting accessible, <span className="text-foreground font-semibold">pixel-perfect user interfaces</span> that blend thoughtful design with robust engineering.
                   </p>
                   
                   <p>
-                    In my previous role, I developed strong skills in full-stack website development, mobile app creation, and 
-                    designing software solutions. I believe these skills will be valuable in contributing to meaningful projects 
-                    and helping teams achieve their objectives.
+                    My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.
+
+Currently, I specialize in building scalable web applications with React and Node.js. I've had the opportunity to develop software across a variety of settings — from innovative startups and digital agencies to Fortune 500 companies. 
                   </p>
                   
                   <p>
-                    What excites me most about development is the opportunity to continuously learn and grow. I see every challenge 
-                    as a chance to improve myself while delivering quality work that makes a real impact.
+My work focuses on creating high-performance applications that serve millions of users while maintaining clean, maintainable codebases. In my spare time, I contribute to open-source projects, write technical articles about modern web development, and mentor junior developers looking to break into the industry.
                   </p>
                 </div>
 
