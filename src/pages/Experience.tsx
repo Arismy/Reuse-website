@@ -7,15 +7,15 @@ const Experience = () => {
     {
       company: "Tech Innovations Inc.",
       position: "Senior Full Stack Developer",
-      location: "San Francisco, CA",
+      location: "DGK, Pakistan",
       duration: "2022 - Present",
       type: "Full-time",
-      description: "Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices for code quality and performance.",
+      description: "I build scalable, high-performance web applications with React and Node.js for startups and enterprises.",
       achievements: [
-        "Increased application performance by 40% through optimization",
-        "Led team of 5 developers on major product launch",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Architected microservices infrastructure handling 1M+ users"
+        "Build and maintain critical components used to construct TechCorp's frontend, across the whole product.,
+        "Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
+        "Developed and shipped highly interactive web applications for both consumer and enterprise clients.",
+        "Led the migration from a monolithic architecture to microservices, improving deployment speed by 60%."
       ],
       technologies: ["React", "Node.js", "TypeScript", "AWS", "Docker", "MongoDB"]
     },
