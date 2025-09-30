@@ -8,34 +8,38 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with modern technologies for scalability and performance.",
-      image: "/img/Apple-Store.jpg",
+      image: "/image/Apple-Store.jpeg",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
       type: "Web Application",
       icon: Globe,
       color: "bg-gradient-primary",
-      features: ["Payment Processing", "Inventory Management", "Admin Dashboard", "Real-time Analytics"]
+      features: ["Payment Processing", "Inventory Management", "Admin Dashboard", "Real-time Analytics"],
+      liveUrl: "https://e-shop-apple-one.vercel.app",
+      repoUrl: "https://github.com/muhammadyasirmalkani1/E-Shop/"
     },
     {
-      title: "Task Management App",
+      title: "Reflect App",
       description: "Cross-platform mobile application for team collaboration and project management. Features real-time synchronization and offline capabilities.",
       image: "/api/placeholder/600/400", 
       technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
       type: "Mobile App",
       icon: Smartphone,
       color: "bg-gradient-secondary",
-      features: ["Real-time Sync", "Offline Mode", "Team Collaboration", "Push Notifications"]
-      liveUrl: "https://e-shop-apple-one.vercel.app",
-      repoUrl: "https://github.com/muhammadyasirmalkani1/E-Shop/"
+      features: ["Real-time Sync", "Offline Mode", "Team Collaboration", "Push Notifications"],
+      liveUrl: "https://reflect-me-ai.vercel.app", // no public demo available
+      repoUrl: "https://github.com/muhammadyasirmalkani1/reflect.me"
     },
     {
-      title: "Analytics Dashboard",
+      title: "Dashboard Crypto Vault",
       description: "Business intelligence dashboard with interactive charts, real-time data visualization, and automated reporting capabilities.",
       image: "/api/placeholder/600/400",
       technologies: ["Vue.js", "Python", "MongoDB", "D3.js", "Docker"],
       type: "Web Application", 
       icon: Database,
       color: "bg-gradient-accent",
-      features: ["Interactive Charts", "Real-time Data", "Automated Reports", "Export Functionality"]
+      features: ["Interactive Charts", "Real-time Data", "Automated Reports", "Export Functionality"],
+      liveUrl: "https://vault-blond.vercel.app/",
+      repoUrl: ""
     },
     {
       title: "Social Media Platform",
@@ -45,7 +49,9 @@ const Projects = () => {
       type: "Web Application",
       icon: Globe,
       color: "bg-gradient-primary",
-      features: ["Real-time Messaging", "Content Sharing", "Privacy Controls", "Media Upload"]
+      features: ["Real-time Messaging", "Content Sharing", "Privacy Controls", "Media Upload"],
+      liveUrl: "",
+      repoUrl: ""
     },
     {
       title: "Fitness Tracking App", 
@@ -55,7 +61,9 @@ const Projects = () => {
       type: "Mobile App",
       icon: Smartphone,
       color: "bg-gradient-secondary", 
-      features: ["Workout Tracking", "Nutrition Logging", "Progress Analytics", "Health Integration"]
+      features: ["Workout Tracking", "Nutrition Logging", "Progress Analytics", "Health Integration"],
+      liveUrl: "",
+      repoUrl: ""
     },
     {
       title: "CRM System",
@@ -65,7 +73,9 @@ const Projects = () => {
       type: "Web Application",
       icon: Database,
       color: "bg-gradient-accent",
-      features: ["Lead Management", "Sales Pipeline", "Email Automation", "Reporting"]
+      features: ["Lead Management", "Sales Pipeline", "Email Automation", "Reporting"],
+      liveUrl: "",
+      repoUrl: ""
     }
   ];
 
@@ -141,14 +151,33 @@ const Projects = () => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-3 pt-4">
-                      <Button className="flex-1 bg-gradient-primary hover:shadow-glow">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </Button>
-                      <Button variant="outline" className="glass-button">
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </Button>
+                      {project.liveUrl ? (
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+                          <Button className="w-full flex items-center justify-center bg-gradient-primary hover:shadow-glow">
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Live Demo
+                          </Button>
+                        </a>
+                      ) : (
+                        <Button className="flex-1 bg-gradient-primary/40 cursor-not-allowed" disabled title="Live demo not available">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live Demo
+                        </Button>
+                      )}
+
+                      {project.repoUrl ? (
+                        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline" className="glass-button flex items-center">
+                            <Github className="w-4 h-4 mr-2" />
+                            Code
+                          </Button>
+                        </a>
+                      ) : (
+                        <Button variant="outline" className="glass-button cursor-not-allowed" disabled title="Repository not linked">
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </CardContent>
