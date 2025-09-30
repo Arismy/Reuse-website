@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with modern technologies for scalability and performance.",
-      image: "/api/placeholder/600/400",
+      image: "/img/Apple-Store.jpg",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
       type: "Web Application",
       icon: Globe,
@@ -24,6 +24,8 @@ const Projects = () => {
       icon: Smartphone,
       color: "bg-gradient-secondary",
       features: ["Real-time Sync", "Offline Mode", "Team Collaboration", "Push Notifications"]
+      liveUrl: "https://e-shop-apple-one.vercel.app",
+      repoUrl: "https://github.com/muhammadyasirmalkani1/E-Shop/"
     },
     {
       title: "Analytics Dashboard",
