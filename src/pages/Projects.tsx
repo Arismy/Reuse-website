@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with modern technologies for scalability and performance.",
-      image: "/img/Apple-Store.jpeg",
+      imageUrl: "/img/Apple-Store.jpeg",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
       type: "Web Application",
       icon: Globe,
