@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with modern technologies for scalability and performance.",
-      image: "/img/Apple-Store.jpeg",
+      image: "/public/img/Apple-Store.jpeg",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
       type: "Web Application",
       icon: Globe,
@@ -20,7 +20,7 @@ const Projects = () => {
     {
       title: "Reflect App",
       description: "Cross-platform mobile application for team collaboration and project management. Features real-time synchronization and offline capabilities.",
-      image: "/img/Apple-Store.jpeg", 
+      image: "/public/img/Apple-Store.jpeg", 
       technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
       type: "Mobile App",
       icon: Smartphone,
