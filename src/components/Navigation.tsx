@@ -25,7 +25,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold gradient-text">
-            Portfolio
+            Developer
           </Link>
 
           {/* Desktop Navigation */}
