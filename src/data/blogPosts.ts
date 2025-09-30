@@ -38,7 +38,7 @@ The journey continues, and I'm excited about what's next!
     date: "2024-01-15",
     category: "Career",
     readTime: "5 min read",
-    image: "/api/placeholder/800/400",
+    image: "/img/Apple-Store.jpg",
     tags: ["career", "development", "full-stack"]
   },
   {
