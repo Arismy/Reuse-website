@@ -10,14 +10,15 @@ const Home = () => {
           {/* Hero Content */}
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl font-bold">
-              <span className="gradient-text">Full Stack</span>
+              <span className="gradient-text">M Yasir</span>
               <br />
-              <span className="text-foreground">Developer</span>
+              <span className="text-foreground">Malkani</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm a <span className="gradient-text-secondary font-semibold">motivated and hardworking</span> 
-              {" "} individual who enjoys learning new skills and applying them to improve both myself and the workplace. My journey in full stack development has been driven by curiosity and a commitment to excellence.
+              Professional <span className="gradient-text-secondary font-semibold">Website Developer & Graphic Designer</span> 
+              {" "} with over 5 years of experience in building beautiful, functional websites and applications. 
+              My journey in the digital world began with a fascination for how technology and creative design intersect to create meaningful user experiences.
             </p>
           </div>
 
@@ -30,7 +31,18 @@ const Home = () => {
               </Button>
             </Link>
             
-            <Button variant="outline" className="glass-button px-8 py-6 text-lg">
+            <Button 
+              variant="outline" 
+              className="glass-button px-8 py-6 text-lg hover-glow"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/cv/My-CV.pdf';
+                link.download = 'Yasir-Malkani-CV.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <Download className="mr-2 w-5 h-5" />
               Download CV
             </Button>
@@ -45,7 +57,9 @@ const Home = () => {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="#"
+              href="http://linkedin.com/in/muhammadyasir"
+              target="_blank"
+              rel="noopener noreferrer"
               className="glass-button p-4 rounded-full hover-lift hover:shadow-glow-secondary transition-all duration-300"
             >
               <Linkedin className="w-6 h-6" />

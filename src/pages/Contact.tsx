@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Download } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -32,21 +32,21 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@example.com",
-      href: "mailto:contact@example.com",
+      value: "yasir.malkani@example.com",
+      href: "mailto:yasir.malkani@example.com",
       color: "bg-gradient-primary"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "(+92) 333-488-3737",
+      href: "tel:+923334883737",
       color: "bg-gradient-secondary"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "Available Worldwide",
+      value: "Dera Ghazi Khan, Punjab, Pakistan",
       href: "#",
       color: "bg-gradient-accent"
     }
@@ -62,7 +62,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       name: "LinkedIn", 
-      href: "https://linkedin.com",
+      href: "http://linkedin.com/in/muhammadyasir",
       color: "hover:shadow-glow-secondary"
     },
     {
@@ -222,11 +222,26 @@ const Contact = () => {
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in">
           <Card className="glass-card p-8 hover-lift inline-block">
-            <CardContent className="p-0 space-y-4">
+            <CardContent className="p-0 space-y-6">
               <h3 className="text-2xl font-bold gradient-text">Ready to Start Something Amazing?</h3>
               <p className="text-muted-foreground max-w-md">
                 I believe I can make a positive contribution to your team and help achieve your objectives.
               </p>
+              <Button 
+                variant="outline" 
+                className="glass-button px-6 py-3 hover-glow"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/cv/My-CV.pdf';
+                  link.download = 'Yasir-Malkani-CV.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                <Download className="mr-2 w-4 h-4" />
+                Download My CV
+              </Button>
             </CardContent>
           </Card>
         </div>
