@@ -10,9 +10,9 @@ const Home = () => {
           {/* Hero Content */}
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl font-bold">
-              <span className="gradient-text">Full Stack</span>
+              <span className="gradient-text">Welcome to the </span>
               <br />
-              <span className="text-foreground">Developer</span>
+              <span className="text-foreground">Future</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
