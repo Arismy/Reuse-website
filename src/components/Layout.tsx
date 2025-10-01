@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Navigation from "./Navigation";
 import AnimatedBackground from "./AnimatedBackground";
 import ChatBot from "./ChatBot";
+import Footer from "./Footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -15,6 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="pt-16 relative z-10">
         {children}
       </main>
+      <Footer />
       <ChatBot />
     </div>
   );

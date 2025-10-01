@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Code2, User, Briefcase, Mail, Lightbulb, BookOpen, GraduationCap, Award } from "lucide-react";
+import { Menu, X, Code2, User, Briefcase, Mail, Lightbulb, BookOpen, GraduationCap, Award, DollarSign } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,7 @@ const Navigation = () => {
     { path: "/experience", label: "Experience", icon: Award },
     { path: "/projects", label: "Projects", icon: Briefcase },
     { path: "/education", label: "Education", icon: GraduationCap },
+    { path: "/pricing", label: "Pricing", icon: DollarSign },
     { path: "/blog", label: "Blog", icon: BookOpen },
     { path: "/contact", label: "Contact", icon: Mail },
   ];
@@ -29,7 +31,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
@@ -47,15 +49,19 @@ const Navigation = () => {
                 </Link>
               );
             })}
+            <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden glass-button p-2 rounded-lg"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Menu Button & Theme Toggle */}
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="glass-button p-2 rounded-lg"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

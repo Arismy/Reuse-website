@@ -12,6 +12,7 @@ import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Education from "./pages/Education";
+import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/experience" element={<Layout><Experience /></Layout>} />
             <Route path="/projects" element={<Layout><Projects /></Layout>} />
             <Route path="/education" element={<Layout><Education /></Layout>} />
+            <Route path="/pricing" element={<Layout><Pricing /></Layout>} />
             <Route path="/blog" element={<Layout><Blog /></Layout>} />
             <Route path="/blog/:id" element={<Layout><BlogPost /></Layout>} />
             <Route path="/contact" element={<Layout><Contact /></Layout>} />
