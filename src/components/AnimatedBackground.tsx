@@ -54,7 +54,7 @@ const AnimatedBackground = () => {
       {elements.map((element) => (
         <div
           key={element.id}
-          className="absolute rounded-full blur-3xl opacity-10 animate-pulse"
+          className="absolute rounded-full blur-3xl opacity-20 animate-pulse"
           style={{
             left: `${element.x}%`,
             top: `${element.y}%`,
@@ -68,7 +68,7 @@ const AnimatedBackground = () => {
       ))}
 
       {/* Geometric Patterns */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <defs>
             <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -80,7 +80,7 @@ const AnimatedBackground = () => {
       </div>
 
       {/* Animated Lines */}
-      <div className="absolute inset-0 opacity-8">
+      <div className="absolute inset-0 opacity-20">
         {[...Array(3)].map((_, i) => (
           <div
             key={i}
