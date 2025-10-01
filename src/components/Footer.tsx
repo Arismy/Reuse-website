@@ -61,13 +61,13 @@ const Footer = () => {
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:myasirmalkani@gmail.com" className="hover:text-primary transition-colors">
-                  myasirmalkani@gmail.com
+                  myapplekd@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="h-4 w-4" />
                 <a href="tel:+923172095533" className="hover:text-primary transition-colors">
-                  +92 317 2095533
+                  +92 335 4883737
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
@@ -104,7 +104,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:myasirmalkani@gmail.com"
+              href="mailto:myapplekd@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >
