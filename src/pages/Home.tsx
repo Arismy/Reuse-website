@@ -10,14 +10,15 @@ const Home = () => {
           {/* Hero Content */}
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl font-bold">
-              <span className="gradient-text">Senior Full-Stack Developer </span>
+              <span className="gradient-text">Full Stack</span>
               <br />
-              <span className="text-foreground"></span>
+              <span className="text-foreground">Developer</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm <span className="gradient-text-secondary font-semibold">designed to be</span> 
-              {" "} helpful, harmless, and honest in conversations. I can assist with a wide range of tasks. Writing and editing drafts, essays, creative content, emails. Coding writing, debugging, and explaining code in various languages. Problem-solving working through challenges step-by-step. Creative projects brainstorming, storytelling, generating ideas 
+              I'm a <span className="gradient-text-secondary font-semibold">motivated and hardworking</span> 
+              {" "} individual who enjoys learning new skills and applying them to improve both myself and the workplace. My journey in full stack development has been driven by curiosity and a commitment to excellence.
+            </p>
           </div>
 
           {/* Call to Action Buttons */}
@@ -29,18 +30,7 @@ const Home = () => {
               </Button>
             </Link>
             
-            <Button 
-              variant="outline" 
-              className="glass-button px-8 py-6 text-lg hover-glow"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/cv/My-CV.pdf';
-                link.download = 'Yasir-Malkani-CV.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
+            <Button variant="outline" href="/image/My.pdf" className="glass-button px-8 py-6 text-lg">
               <Download className="mr-2 w-5 h-5" />
               Download CV
             </Button>
@@ -49,15 +39,13 @@ const Home = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6 pt-8">
             <a
-              href="#"
+              href="https://github.com/muhammadyasirmalkani1"
               className="glass-button p-4 rounded-full hover-lift hover:shadow-glow transition-all duration-300"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="http://linkedin.com/in/muhammadyasir"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="http://linkedin.com/in/muhammadyasirmalkani"
               className="glass-button p-4 rounded-full hover-lift hover:shadow-glow-secondary transition-all duration-300"
             >
               <Linkedin className="w-6 h-6" />
