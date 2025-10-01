@@ -16,9 +16,9 @@ const Home = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm a <span className="gradient-text-secondary font-semibold">motivated and hardworking</span> 
-              {" "} individual who enjoys learning new skills and applying them to improve both myself and the workplace. My journey in full stack development has been driven by curiosity and a commitment to excellence.
-            </p>
+              I'm <span className="gradient-text-secondary font-semibold">designed to be</span> 
+              {" "} helpful, harmless, and honest in conversations. I can assist with a wide range of tasks. Writing and editing - drafts, essays, creative content, emails. Coding - writing, debugging, and explaining code in various languages
+	•	Problem-solving - working through challenges step-by-step. Creative projects - brainstorming, storytelling, generating ideas 
           </div>
 
           {/* Call to Action Buttons */}
