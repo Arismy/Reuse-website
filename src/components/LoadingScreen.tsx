@@ -34,7 +34,7 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background transition-opacity duration-500">
+    <div className="flex inset-0 z-50 flex items-center justify-center bg-background transition-opacity duration-500">
       <video
         id="loading-video"
         autoPlay
