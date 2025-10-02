@@ -16,6 +16,10 @@ import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
+import WebDevelopment from "./pages/WebDevelopment";
+import GraphicDesign from "./pages/GraphicDesign";
+import UIUXDesign from "./pages/UIUXDesign";
+import Branding from "./pages/Branding";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +44,10 @@ const App = () => {
             <Route path="/blog" element={<Layout><Blog /></Layout>} />
             <Route path="/blog/:id" element={<Layout><BlogPost /></Layout>} />
             <Route path="/contact" element={<Layout><Contact /></Layout>} />
+            <Route path="/services/web-development" element={<Layout><WebDevelopment /></Layout>} />
+            <Route path="/services/graphic-design" element={<Layout><GraphicDesign /></Layout>} />
+            <Route path="/services/ui-ux-design" element={<Layout><UIUXDesign /></Layout>} />
+            <Route path="/services/branding" element={<Layout><Branding /></Layout>} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

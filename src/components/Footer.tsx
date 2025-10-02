@@ -47,10 +47,26 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li className="text-muted-foreground">Web Development</li>
-              <li className="text-muted-foreground">Graphic Design</li>
-              <li className="text-muted-foreground">UI/UX Design</li>
-              <li className="text-muted-foreground">Branding</li>
+              <li>
+                <Link to="/services/web-development" className="text-muted-foreground hover:text-primary transition-colors">
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/graphic-design" className="text-muted-foreground hover:text-primary transition-colors">
+                  Graphic Design
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/ui-ux-design" className="text-muted-foreground hover:text-primary transition-colors">
+                  UI/UX Design
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/branding" className="text-muted-foreground hover:text-primary transition-colors">
+                  Branding
+                </Link>
+              </li>
             </ul>
           </div>
 
