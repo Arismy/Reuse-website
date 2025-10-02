@@ -8,42 +8,24 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const video = document.getElementById('loading-video') as HTMLVideoElement;
-    
-    if (video) {
-      video.addEventListener('ended', () => {
-        setIsVisible(false);
-        setTimeout(onLoadingComplete, 500);
-      });
-    }
-
-    // Fallback: hide after 10 seconds if video doesn't end
-    const fallbackTimer = setTimeout(() => {
+    // Show loading screen for 3 seconds
+    const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onLoadingComplete, 500);
-    }, 10000);
+    }, 3000);
 
-    return () => {
-      clearTimeout(fallbackTimer);
-      if (video) {
-        video.removeEventListener('ended', () => {});
-      }
-    };
+    return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
   if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background transition-opacity duration-500">
-      <video
-        id="loading-video"
-        autoPlay
-        muted
-        playsInline
-        className="w-full h-full object-cover"
-      >
-        <source src="/videos/loading-animation.mp4" type="video/mp4" />
-      </video>
+      <img
+        src="/loading-animation.gif"
+        alt="Loading animation"
+        className="max-w-md w-full h-auto object-contain"
+      />
     </div>
   );
 };
