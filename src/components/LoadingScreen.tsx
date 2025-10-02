@@ -1,108 +1,100 @@
 import { useEffect, useState } from "react";
 
-interface LoadingScreenProps {
-  onLoadingComplete: () => void;
+interface FloatingElement {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  color: string;
+  speed: number;
 }
 
-const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [progress, setProgress] = useState(0);
+const AnimatedBackground = () => {
+  const [elements, setElements] = useState<FloatingElement[]>([]);
 
   useEffect(() => {
-    // Animate progress bar
-    const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(progressInterval);
-          return 100;
-        }
-        return prev + 2;
+    const colors = [
+      "hsl(263 70% 60%)", // Primary
+      "hsl(200 70% 60%)", // Secondary
+      "hsl(320 70% 60%)", // Accent
+      "hsl(142 76% 36%)", // Success
+    ];
+
+    const newElements: FloatingElement[] = [];
+    
+    for (let i = 0; i < 8; i++) {
+      newElements.push({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * 100 + 50,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        speed: Math.random() * 2 + 1,
       });
-    }, 100);
+    }
+    
+    setElements(newElements);
+  }, []);
 
-    // Show loading screen for 5 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-      setTimeout(onLoadingComplete, 500);
-    }, 5000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setElements(prev => prev.map(element => ({
+        ...element,
+        x: (element.x + element.speed * 0.1) % 100,
+        y: element.y + Math.sin(Date.now() * 0.001 + element.id) * 0.1,
+      })));
+    }, 50);
 
-    return () => {
-      clearTimeout(timer);
-      clearInterval(progressInterval);
-    };
-  }, [onLoadingComplete]);
-
-  if (!isVisible) return null;
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 transition-opacity duration-500">
-      {/* Animated background particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-700" />
+    <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      {/* Gradient Orbs */}
+      {elements.map((element) => (
+        <div
+          key={element.id}
+          className="absolute rounded-full blur-3xl opacity-20 animate-pulse"
+          style={{
+            left: `${element.x}%`,
+            top: `${element.y}%`,
+            width: `${element.size}px`,
+            height: `${element.size}px`,
+            background: `radial-gradient(circle, ${element.color} 0%, transparent 70%)`,
+            transform: `translate(-50%, -50%)`,
+            animation: `floating ${element.speed * 3 + 6}s ease-in-out infinite`,
+          }}
+        />
+      ))}
+
+      {/* Geometric Patterns */}
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.1"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
       </div>
 
-      {/* Main logo container with multiple animations */}
-      <div className="relative z-10 flex flex-col items-center gap-8">
-        {/* Logo with combined animations */}
-        <div className="relative">
-          {/* Glow effect ring */}
-          <div className="absolute inset-0 -m-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-xl opacity-50 animate-[spin_3s_linear_infinite]" />
-          
-          {/* Main logo */}
-          <img
-            src="/loading-screen.png"
-            alt="Loading animation"
-            className="relative max-w-md w-full h-auto object-contain animate-[fade-in_0.5s_ease-out,scale-in_0.5s_ease-out] drop-shadow-2xl"
+      {/* Animated Lines */}
+      <div className="absolute inset-0 opacity-20">
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-px bg-gradient-to-b from-transparent via-primary to-transparent"
             style={{
-              animation: 'fadeIn 0.5s ease-out, scaleIn 0.5s ease-out, float 3s ease-in-out infinite'
+              left: `${20 + i * 30}%`,
+              height: '200%',
+              animation: `slideInUp ${3 + i}s ease-in-out infinite alternate`,
             }}
           />
-          
-          {/* Rotating accent ring */}
-          <div className="absolute inset-0 -m-2 border-4 border-transparent border-t-primary/50 rounded-full animate-[spin_2s_linear_infinite]" />
-        </div>
-
-        {/* Loading text with fade animation */}
-        <div className="text-center space-y-4">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-[gradient-shift_3s_ease-in-out_infinite]">
-            Loading Experience
-          </h2>
-          
-          {/* Progress bar */}
-          <div className="w-64 h-2 bg-muted rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-gradient-to-r from-primary via-secondary to-accent transition-all duration-300 ease-out rounded-full"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          
-          {/* Loading dots */}
-          <div className="flex justify-center gap-2">
-            <span className="w-2 h-2 bg-primary rounded-full animate-bounce" />
-            <span className="w-2 h-2 bg-secondary rounded-full animate-bounce delay-100" style={{ animationDelay: '0.1s' }} />
-            <span className="w-2 h-2 bg-accent rounded-full animate-bounce delay-200" style={{ animationDelay: '0.2s' }} />
-          </div>
-        </div>
+        ))}
       </div>
-
-      {/* Custom animations */}
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) scale(1); }
-          50% { transform: translateY(-20px) scale(1.05); }
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes scaleIn {
-          from { transform: scale(0.8); }
-          to { transform: scale(1); }
-        }
-      `}</style>
     </div>
   );
 };
 
-export default LoadingScreen;
+export default AnimatedBackground;
