@@ -8,11 +8,11 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Show loading screen for 10 seconds
+    // Show loading screen for 5 seconds
     const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(onLoadingComplete, 500);
-    }, 10000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
@@ -22,9 +22,9 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background transition-opacity duration-500">
       <img
-        src="/loading-animation-custom.png"
+        src="/loading-screen.png"
         alt="Loading animation"
-        className="max-w-md w-full h-auto object-contain animate-[spin_2s_ease-in-out_infinite]"
+        className="max-w-md w-full h-auto object-contain animate-pulse"
       />
     </div>
   );
